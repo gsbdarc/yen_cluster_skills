@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this skill, please cite it as below."
+title: "GitHub for Research — a Claude Code skill"
+abstract: >-
+  A Claude Code skill that teaches research-grade GitHub practice to
+  researchers without a software background: attribution, issues, branches,
+  the GitHub Flow work cycle, data-integrity checks, reproducible
+  environments, and a project history that reads like a lab notebook.
+type: software
+authors:
+  - family-names: Storer
+    given-names: Alex
+    email: astorer@stanford.edu
+    affiliation: "Stanford Graduate School of Business"
+repository-code: "https://github.com/gsbdarc/claude-skill-github-for-research"
+url: "https://github.com/gsbdarc/claude-skill-github-for-research"
+license: MIT
+version: "1.0.0"
+date-released: "2026-07-08"
+keywords:
+  - reproducible-research
+  - github
+  - open-science
+  - claude-code
+  - research-software-engineering
