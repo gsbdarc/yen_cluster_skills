@@ -14,11 +14,12 @@ The skill is active automatically in any project that contains it at `.claude/sk
 
 ```bash
 git clone https://github.com/gsbdarc/claude-skill-github-for-research.git
+mkdir -p ~/.claude/skills   # create the skills folder if it doesn't exist yet
 ln -s "$(pwd)/claude-skill-github-for-research/.claude/skills/github-for-research" \
       ~/.claude/skills/github-for-research
 ```
 
-(Use `cp -R` instead of `ln -s` if you'd rather have a static copy.)
+(Use `cp -R` instead of `ln -s` if you'd rather have a static copy. The `mkdir -p` line is still needed either way, since `~/.claude/skills/` may not exist on a fresh Claude Code install.)
 
 ---
 
