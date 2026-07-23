@@ -21,6 +21,30 @@ ln -s "$(pwd)/claude-skill-github-for-research/.claude/skills/github-for-researc
 
 (Use `cp -R` instead of `ln -s` if you'd rather have a static copy. The `mkdir -p` line is still needed either way, since `~/.claude/skills/` may not exist on a fresh Claude Code install.)
 
+### OpenAI Codex / agent skills
+
+This repository also includes a model-agnostic agent-skill version at
+[`.agents/skills/github-for-research/SKILL.md`](.agents/skills/github-for-research/SKILL.md).
+Use this variant with OpenAI Codex or other tools that discover skills from
+`.agents/skills`, following OpenAI's [Codex skill documentation](https://learn.chatgpt.com/docs/build-skills).
+
+When the repository is open in Codex, the `.agents/skills/github-for-research/`
+copy is available as a repo-scoped skill. To use it across repositories, copy or
+link it into your user skills folder:
+
+```bash
+git clone https://github.com/gsbdarc/claude-skill-github-for-research.git
+mkdir -p ~/.agents/skills
+ln -s "$(pwd)/claude-skill-github-for-research/.agents/skills/github-for-research" \
+      ~/.agents/skills/github-for-research
+```
+
+The Codex variant keeps the same research workflow guidance but avoids vendor-
+or model-specific attribution. Its optional UI metadata lives at
+[`.agents/skills/github-for-research/agents/openai.yaml`](.agents/skills/github-for-research/agents/openai.yaml),
+using the documented `interface.display_name`, `interface.short_description`,
+and `interface.default_prompt` fields.
+
 ---
 
 ## Design philosophy
