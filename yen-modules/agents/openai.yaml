@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yen Modules"
+  short_description: "Manage software modules on Yen"
+  default_prompt: "Use $yen-modules to find and load software on my Yen session."

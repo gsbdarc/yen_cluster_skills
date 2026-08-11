@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yen Access"
+  short_description: "Guide secure onboarding to Yen"
+  default_prompt: "Use $yen-access to help me access the Yen cluster safely."

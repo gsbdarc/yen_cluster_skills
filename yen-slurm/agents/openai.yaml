@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yen Slurm"
+  short_description: "Run and manage Yen Slurm jobs"
+  default_prompt: "Use $yen-slurm to prepare and manage my Yen Slurm job."

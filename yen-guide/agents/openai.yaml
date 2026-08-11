@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yen Guide"
+  short_description: "Choose the right Yen resource"
+  default_prompt: "Use $yen-guide to help me choose an appropriate Yen resource for my work."

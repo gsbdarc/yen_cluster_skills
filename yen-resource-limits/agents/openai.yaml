@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yen Resource Limits"
+  short_description: "Check Yen compute and storage limits"
+  default_prompt: "Use $yen-resource-limits to explain the current Yen resource limits for my work."

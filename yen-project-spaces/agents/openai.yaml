@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yen Project Spaces"
+  short_description: "Manage Yen project space and access"
+  default_prompt: "Use $yen-project-spaces to help me manage Yen project storage and workgroup access."
