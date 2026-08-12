@@ -11,7 +11,7 @@ Help users reach Yen without handling credentials or performing work on the clus
 
 - Never request, receive, store, paste, or transmit passwords, Duo prompts, recovery codes, SSH private keys, or other secrets.
 - Explain that the user must complete Stanford authentication themselves.
-- Stop after successful access is established. Hand off work on a logged-in Yen session to `$yen-modules` or another appropriate skill.
+- Stop after successful access is established. Hand off work on a logged-in Yen session to the `yen-modules` skill or another appropriate skill.
 
 ## Determine the route
 

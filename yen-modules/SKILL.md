@@ -9,7 +9,7 @@ Manage software modules in the user's active Yen shell and clearly report the co
 
 ## Scope and safety
 
-- Work only after the user is connected to Yen. For onboarding, use `$yen-access`.
+- Work only after the user is connected to Yen. For onboarding, use the `yen-access` skill.
 - Treat `module avail`, `module list`, and `module show` as read-only.
 - Run `module load`, `module swap`, `module unload`, or `ml purge` only when the user explicitly requests the change or confirms a proposed change.
 - State that module changes affect only the current shell session; reconnecting or opening a new terminal requires loading modules again.

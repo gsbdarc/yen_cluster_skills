@@ -9,11 +9,11 @@ Manage a user’s Yen Slurm workload safely, explain each command, and confirm b
 
 ## Safety and scope
 
-- Work only in an active Yen shell session. Use `$yen-access` for onboarding and `$yen-modules` for module-only tasks.
+- Work only in an active Yen shell session. Use the `yen-access` skill for onboarding and the `yen-modules` skill for module-only tasks.
 - Treat `sinfo`, `squeue`, `sacct`, `scontrol show`, and output-file reads as read-only.
 - Before `sbatch`, present the script, requested resources, output location, and the exact submission command. Submit only after the user explicitly confirms.
 - Before `scancel`, identify the exact job or jobs, state the impact, and obtain explicit confirmation. Never cancel all of a user's jobs by default.
-- Do not guess resource requirements. Start from a tested interactive command or ask about runtime, memory, cores, GPU need, and output location. Use `$yen-resource-limits` when exact policy limits are needed.
+- Do not guess resource requirements. Start from a tested interactive command or ask about runtime, memory, cores, GPU need, and output location. Use the `yen-resource-limits` skill when exact policy limits are needed.
 
 ## Build a job plan
 
@@ -51,7 +51,7 @@ Manage a user’s Yen Slurm workload safely, explain each command, and confirm b
 ## GPU jobs
 
 1. Confirm that the program actually supports GPU execution; a GPU request alone does not accelerate ordinary code.
-2. Use the live resource inventory to choose an appropriate GPU type and count. Consult `$yen-guide` for the node architecture when the user needs hardware context.
+2. Use the live resource inventory to choose an appropriate GPU type and count. Consult the `yen-guide` skill for the node architecture when the user needs hardware context.
 3. Verify that the requested software environment has GPU support.
 4. After a GPU job starts, inspect its queue state and, when useful, GPU utilization from the allocated node. Do not attempt to use a GPU node outside the user's scheduled job.
 

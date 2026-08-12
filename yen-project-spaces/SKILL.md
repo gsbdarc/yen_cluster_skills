@@ -18,7 +18,7 @@ Help users use durable shared Yen project storage and understand the workgroup t
 
 - Recommend project space for durable large datasets, shared research outputs, collaboration, and long-running workflows on Yen.
 - Explain that project space is VAST-backed and is available through both `/zfs/projects/...` and `/yen/projects/...`; these paths point to the same storage.
-- Distinguish project space from home directories and temporary scratch. Use `$yen-guide` for the broader storage decision when needed.
+- Distinguish project space from home directories and temporary scratch. Use the `yen-guide` skill for the broader storage decision when needed.
 - Explain that Yen is not approved for high-risk data and that VAST-backed project space is accessible only from Yen, not from Sherlock or FarmShare.
 
 ## Request and locate project space

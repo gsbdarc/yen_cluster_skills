@@ -25,7 +25,7 @@ Recommend a future interactive-work skill for long-running interactive tasks, in
 
 Recommend Yen Slurm for long-running, resource-intensive, repeatable, parallel, or batch work. Explain that a scheduler queues jobs and provides requested CPU, memory, time, and GPU resources. Smaller, right-sized requests usually begin sooner.
 
-Before recommending a Slurm submission, check that the program can run successfully from an interactive Yen command line. Recommend a future Slurm skill for creating, submitting, monitoring, and canceling jobs once it is installed.
+Before recommending a Slurm submission, check that the program can run successfully from an interactive Yen command line. Recommend the `yen-slurm` skill for creating, submitting, monitoring, and canceling jobs.
 
 ### GPU resources
 
@@ -60,10 +60,11 @@ Answer questions such as:
 
 ## Focused handoffs
 
-- Use `$yen-access` for access onboarding.
-- Use `$yen-modules` after login to inspect or change installed software modules.
-- Use `$yen-resource-limits` for exact interactive, Slurm, GPU, array, or storage limits.
-- Recommend the future Slurm skill for job creation and management.
+- Use the `yen-access` skill for access onboarding.
+- Use the `yen-modules` skill after login to inspect or change installed software modules.
+- Use the `yen-resource-limits` skill for exact interactive, Slurm, GPU, array, or storage limits.
+- Use the `yen-slurm` skill for job creation, submission, monitoring, and cancellation.
+- Use the `yen-project-spaces` skill for durable shared project storage and its workgroup access.
 - Recommend the future interactive-work skill for tmux and other persistent interactive workflows.
 
 ## Reference

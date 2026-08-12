@@ -27,14 +27,14 @@ Provide accurate, scoped Yen limits and explain how they apply to the user's cho
 2. Use `sacctmgr show qos <partition>` and `sinfo` to verify the current partition configuration before planning a submission.
 3. Distinguish the partition time limit from the default requested time. Tell users to request an appropriate duration rather than assuming the maximum.
 4. State that the maximum Yen Slurm job-array size is 512 tasks.
-5. Hand off to `$yen-slurm` for creating, submitting, monitoring, or cancelling a job.
+5. Hand off to the `yen-slurm` skill for creating, submitting, monitoring, or cancelling a job.
 
 ## Storage limits
 
 1. Explain that home directories have an 80 GiB soft quota and a 300 GiB hard quota.
 2. Use `gsbquota` to check the user's current home quota, or `gsbquota <project-path>` for a project space.
 3. Use `gsbbrowser` when the user needs to identify large items in their home directory.
-4. Hand off to `$yen-project-spaces` for durable project storage and `$yen-guide` for selecting among home, project, temporary, and scratch spaces.
+4. Hand off to the `yen-project-spaces` skill for durable project storage and the `yen-guide` skill for selecting among home, project, temporary, and scratch spaces.
 
 ## Common questions
 

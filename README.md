@@ -1,6 +1,6 @@
 # Yen Cluster Skills
 
-Reusable Codex skills for Stanford GSB's Yen computing environment.
+Reusable agent skills for Stanford GSB's Yen computing environment. Each skill directory works with both Codex and Claude Code.
 
 ## Included skills
 
@@ -28,12 +28,34 @@ Repeat for the skills a user needs. Codex follows symlinked skill directories. R
 
 For a project-specific setup, place only the relevant skill directories under that project's `.agents/skills/` directory.
 
+## Using the skills with Claude Code
+
+Claude Code discovers repository skills in `.claude/skills/` and user-wide skills in `~/.claude/skills/`.
+
+This repository already ships `.claude/skills/` with a symlink to each skill directory, so cloning it and running Claude Code from the clone makes all six skills available immediately. The symlinks are relative, so they survive a clone to any path.
+
+To make the skills available in every project, symlink them into your user-wide skills directory:
+
+```bash
+mkdir -p ~/.claude/skills
+for s in yen-access yen-guide yen-modules yen-project-spaces yen-resource-limits yen-slurm; do
+  ln -s /path/to/yen_cluster_skills/$s ~/.claude/skills/$s
+done
+```
+
+Restart Claude Code if a newly added skill does not appear; run `/context` to confirm it loaded. A user-wide skill is available from any directory, while the repository copy takes precedence when Claude Code runs inside this clone.
+
+Symlinking keeps one source of truth: editing a `SKILL.md` here updates the skill everywhere at once. It also makes the clone a live dependency, so moving, renaming, or deleting it breaks the installed skills. Copy the directories instead of symlinking them if you want each install to stand on its own.
+
+The `agents/openai.yaml` files are Codex interface metadata and are ignored by Claude Code.
+
 ## Invocation
 
-Codex can choose a skill automatically when its description matches the request. A user can also invoke a skill directly, for example:
+Both harnesses can choose a skill automatically when its description matches the request. A user can also invoke a skill directly:
 
 ```text
-$yen-slurm Help me create a Slurm job for this Python script.
+$yen-slurm Help me create a Slurm job for this Python script.   # Codex
+/yen-slurm Help me create a Slurm job for this Python script.   # Claude Code
 ```
 
 ## Design
