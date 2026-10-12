@@ -1,6 +1,6 @@
 # yen_cluster_skills — conventions for agents and contributors
 
-This repository is the library of end-user skills for Stanford GSB's Yen computing environment, for Claude Code, the claude.ai app, Codex, and ChatGPT. It follows the conventions of [`darc-staff-skills`](https://github.com/gsbdarc/darc-staff-skills), which is the ground truth for how DARC writes skills, with one difference: these skills are for end users. A skill here must work for someone with ordinary Yen access, with no staff privileges and no credential files. Staff-only skills belong in `darc-staff-skills`.
+This repository is the library of end-user skills for Stanford GSB researchers, covering the Yen computing environment and general research practice, for Claude Code, the claude.ai app, Codex, and ChatGPT. It follows the conventions of [`darc-staff-skills`](https://github.com/gsbdarc/darc-staff-skills), which is the ground truth for how DARC writes skills, with one difference: these skills are for end users. A skill here must work for someone with at most ordinary Yen access, with no staff privileges and no credential files. Staff-only skills belong in `darc-staff-skills`.
 
 This file is read when an agent runs inside this clone. It is for people and agents **editing** the repo. Instructions for **using** a skill live in that skill's own `SKILL.md`, because that is the only file an agent sees when the skill is installed elsewhere.
 
@@ -13,6 +13,7 @@ skills/<name>/            one folder per skill — the single source of truth
   manifest.yaml           who made it, when, what it needs (plugins), one-line summary
   agents/openai.yaml      Codex interface metadata: display name, short description, default prompt
   scripts/ references/ assets/   optional, per the Agent Skills spec
+  README.md LICENSE*      optional: a human-facing write-up, and the skill's own license when its text came from elsewhere
 .claude/skills/<name>     symlink -> ../../skills/<name>   (Claude Code discovery)
 .agents/skills/<name>     symlink -> ../../skills/<name>   (Codex discovery)
 .claude-plugin/marketplace.json   plugins: named groups of skills/ folders (see below)

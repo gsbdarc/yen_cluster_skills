@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub for Research"
+  short_description: "Research-grade GitHub workflows"
+  default_prompt: "Use $github-for-research to organize this research project with issues, branches, validation checks, and reproducible history."

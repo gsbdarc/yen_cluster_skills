@@ -23,7 +23,7 @@ Skills in this repo are for Yen end users. A new skill must work for someone wit
 - **what it does and when to use it** — one or two sentences, plus the phrases a user would actually say, plus what it is *not* for and which existing skill handles that instead.
 - **where it runs** — any host, or an active Yen shell; whether it needs network; whether it changes anything (jobs, modules, files, access).
 - **what it needs** — host commands or modules, and any MCP servers or connectors ("plugins" in `manifest.yaml`). If the skill seems to need a credential file, stop and raise it with the author: end-user skills authenticate through the user's own login or a connector.
-- **plugin** — which plugin in the README "Plugins" table it belongs to (today `yen-basics` or `yen-compute`), or none.
+- **plugin** — which plugin in the README "Plugins" table it belongs to (today `yen-basics`, `yen-compute`, or `research-practices`), or none.
 
 ## Procedure
 

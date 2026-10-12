@@ -27,7 +27,7 @@ Scaffolding a skill for persistent interactive sessions with tmux, from inside a
 4. Interviewed the author: what the skill does (start, detach from, list, and reattach to tmux sessions on a specific interactive Yen), the phrases they would say ("keep my script running after I log out", "reattach to my tmux session on yen3"), what it is not for (scheduled batch work, which belongs to the `yen-slurm` skill), where it runs (an active Yen shell, no network), what it changes (creates or kills tmux sessions, so both are gated on confirmation), and which plugin it belongs to (`yen-compute`).
 5. Wrote the frontmatter and body of `skills/yen-interactive/SKILL.md` to the conventions in AGENTS.md, and filled `agents/openai.yaml` with `default_prompt: "Use $yen-interactive to keep my interactive work running on Yen."`
 6. Added a `yen-interactive` row to the "Included skills" table in `README.md`, added `./yen-interactive` to the `yen-compute` skills list in `.claude-plugin/marketplace.json`, and added it to the `yen-compute` row of the README "Plugins" table.
-7. Ran `scripts/validate.py` (`8 skills, 0 errors, 0 warnings`) and `claude plugin validate .` (passed).
+7. Ran `scripts/validate.py` (`9 skills, 0 errors, 0 warnings`) and `claude plugin validate .` (passed).
 
 ## Output
 
