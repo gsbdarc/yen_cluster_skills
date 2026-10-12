@@ -1,10 +1,10 @@
 # License for written content
 
-The **code** in this repository (configuration, snippets) is licensed under the
+The **code** in this folder (configuration, snippets) is licensed under the
 [MIT License](LICENSE).
 
-The **written content** — the skill text (`.claude/skills/github-for-research/SKILL.md`),
-this repository's `README.md`, and this file — is licensed under
+The **written content** — the skill text (`SKILL.md`),
+this folder's `README.md`, and this file — is licensed under
 **Creative Commons Attribution 4.0 International (CC-BY-4.0)**:
 <https://creativecommons.org/licenses/by/4.0/>
 

@@ -1,0 +1,12 @@
+author: alexstorer
+created: 2026-07-08
+
+summary: >-
+  Research-grade GitHub practice for researchers without a software background:
+  transparent AI attribution, issues, branches, the GitHub Flow loop, data-validation
+  checks, reproducible environments, and a history that reads like a lab notebook.
+  Imported with its history from gsbdarc/claude-skill-github-for-research.
+
+requires:
+  plugins: []                 # uses git, plus gh or a GitHub connector when available, with the user's own login
+  secrets: []

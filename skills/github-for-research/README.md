@@ -1,49 +1,35 @@
-# GitHub for Research — a Claude Code skill
+# GitHub for Research — an agent skill
 
-A [Claude Code](https://claude.com/claude-code) **skill** that teaches research-grade GitHub practice to researchers who don't have a software background. You describe what you want in plain words; Claude does the mechanical git/GitHub work and follows the conventions the skill encodes — clear attribution, issues for problems, branches for experiments, careful data checking, reproducible environments, and a project history that reads like a lab notebook.
+An agent **skill** for [Claude Code](https://claude.com/claude-code), Codex, and other tools that read Agent Skills. It teaches research-grade GitHub practice to researchers who don't have a software background. You describe what you want in plain words; the agent does the mechanical git/GitHub work and follows the conventions the skill encodes — clear attribution, issues for problems, branches for experiments, careful data checking, reproducible environments, and a project history that reads like a lab notebook.
 
-The skill itself lives at [`.claude/skills/github-for-research/SKILL.md`](.claude/skills/github-for-research/SKILL.md). **This README explains the reasoning behind what's in it, with links back to the sources** — so the choices are transparent and checkable.
+The skill itself is [`SKILL.md`](SKILL.md). **This README explains the reasoning behind what's in it, with links back to the sources** — so the choices are transparent and checkable.
 
-> **This repository dogfoods its own advice.** It has a structured README, a `LICENSE` that splits code from prose, a `CITATION.cff`, a sensible `.gitignore`, and a commit history that credits Claude — exactly the practices the skill recommends.
+> **This skill dogfoods its own advice.** Its folder has a structured README, a `LICENSE` that splits code from prose, a `CITATION.cff`, and a commit history that credits the AI assistance behind it (`git log -- skills/github-for-research`) — exactly the practices the skill recommends.
+
+It was developed in [`gsbdarc/claude-skill-github-for-research`](https://github.com/gsbdarc/claude-skill-github-for-research), and that repository's history was carried over here with it.
 
 ---
 
 ## Install
 
-The skill is active automatically in any project that contains it at `.claude/skills/github-for-research/`. To use it in **every** project on your machine, link it into your personal skills folder:
+The skill ships in the `research-practices` plugin of [`yen_cluster_skills`](https://github.com/gsbdarc/yen_cluster_skills#plugins).
+
+**Claude Code:**
 
 ```bash
-git clone https://github.com/gsbdarc/claude-skill-github-for-research.git
-mkdir -p ~/.claude/skills   # create the skills folder if it doesn't exist yet
-ln -s "$(pwd)/claude-skill-github-for-research/.claude/skills/github-for-research" \
-      ~/.claude/skills/github-for-research
+claude plugin marketplace add gsbdarc/yen_cluster_skills
+claude plugin install research-practices@yen-cluster-skills
 ```
 
-(Use `cp -R` instead of `ln -s` if you'd rather have a static copy. The `mkdir -p` line is still needed either way, since `~/.claude/skills/` may not exist on a fresh Claude Code install.)
+Then ask for what you need, or invoke it as `/research-practices:github-for-research`.
 
-### OpenAI Codex / agent skills
-
-This repository also includes a model-agnostic agent-skill version at
-[`.agents/skills/github-for-research/SKILL.md`](.agents/skills/github-for-research/SKILL.md).
-Use this variant with OpenAI Codex or other tools that discover skills from
-`.agents/skills`, following OpenAI's [Codex skill documentation](https://learn.chatgpt.com/docs/build-skills).
-
-When the repository is open in Codex, the `.agents/skills/github-for-research/`
-copy is available as a repo-scoped skill. To use it across repositories, copy or
-link it into your user skills folder:
+**Codex**, from a clone of `yen_cluster_skills`:
 
 ```bash
-git clone https://github.com/gsbdarc/claude-skill-github-for-research.git
-mkdir -p ~/.agents/skills
-ln -s "$(pwd)/claude-skill-github-for-research/.agents/skills/github-for-research" \
-      ~/.agents/skills/github-for-research
+./install.sh github-for-research
 ```
 
-The Codex variant keeps the same research workflow guidance but avoids vendor-
-or model-specific attribution. Its optional UI metadata lives at
-[`.agents/skills/github-for-research/agents/openai.yaml`](.agents/skills/github-for-research/agents/openai.yaml),
-using the documented `interface.display_name`, `interface.short_description`,
-and `interface.default_prompt` fields.
+Then invoke it as `$github-for-research`. Its optional Codex UI metadata lives in [`agents/openai.yaml`](agents/openai.yaml), using the documented `interface.display_name`, `interface.short_description`, and `interface.default_prompt` fields.
 
 ---
 
@@ -62,7 +48,7 @@ Three convictions shape every choice in the skill:
 Each practice below is in the skill because it's documented in an established, citable source. Items are grouped by the section they live in.
 
 ### Attribution & transparency
-Every Claude-made commit ends with a `Co-Authored-By: Claude …` line and every Claude-written PR notes it was AI-assisted. This makes the human/AI division of labor visible to co-authors, reviewers, and journals at a glance — a transparency norm that costs nothing and Claude adds automatically.
+Every substantive AI-assisted commit records a line such as `AI-assisted: prepared with <assistant and model>`, and every AI-written PR notes that it was AI-assisted. The note names the specific assistant and model rather than a generic "AI", and the agent asks when it doesn't know them. This makes the human/AI division of labor visible to co-authors, reviewers, and journals at a glance — a transparency norm that costs nothing and the agent adds automatically.
 
 ### Organizing your work (the largest addition)
 The skill names the **[GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow)** cycle explicitly — branch → commit → pull request → review → merge → delete — so researchers have one repeatable loop to internalize, and explains *why* it keeps the main version continuously working. On top of that loop it layers GitHub's own planning features, which the research community endorses in Perez-Riverol et al.'s ["Ten Simple Rules for Taking Advantage of Git and GitHub"](https://doi.org/10.1371/journal.pcbi.1004947):
@@ -111,7 +97,7 @@ Most of the skill maps to a specific citation. Two items are **reasonable synthe
 
 ## How this was built
 
-The practices were compiled through multi-source web research (using Claude) across five bodies of documented guidance: social-science-specific sources (Gentzkow & Shapiro, Project TIER, the AEA Data Editor, BITSS), the reproducibility/open-science literature (The Turing Way, the PLOS "Ten Simple Rules" and "Good Enough Practices" papers), git/GitHub mechanics, GitHub's own official documentation, and research-software-engineering writeups on organizing work. Every retained practice traces to a source in the [Further Reading](.claude/skills/github-for-research/SKILL.md#further-reading) section of the skill.
+The practices were compiled through multi-source web research (using Claude) across five bodies of documented guidance: social-science-specific sources (Gentzkow & Shapiro, Project TIER, the AEA Data Editor, BITSS), the reproducibility/open-science literature (The Turing Way, the PLOS "Ten Simple Rules" and "Good Enough Practices" papers), git/GitHub mechanics, GitHub's own official documentation, and research-software-engineering writeups on organizing work. Every retained practice traces to a source in the [Further Reading](SKILL.md#further-reading) section of the skill.
 
 ---
 

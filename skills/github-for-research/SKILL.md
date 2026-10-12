@@ -1,6 +1,7 @@
 ---
 name: github-for-research
 description: Research-grade GitHub workflow guidance for academic and research projects. Use when working in a GitHub-backed research repository, setting one up, saving or reviewing changes, opening issues or pull requests, preserving a reproducible project history, validating data transformations, documenting analysis pipelines, managing branches for experiments and fixes, or making AI-assisted research work transparent.
+license: CC-BY-4.0 for the text (see LICENSE-CONTENT.md); MIT for code snippets (see LICENSE).
 ---
 
 # GitHub for Research
@@ -13,7 +14,7 @@ Assume the human user may not have a software background. Do the mechanical Git 
 
 Write for researchers first: economists, political scientists, sociologists, psychologists, lab members, students, and co-authors may read the resulting issues, pull requests, and commit history. Avoid assuming they know Git jargon. When a technical term matters, use it, then explain it briefly in plain language.
 
-The `.agents` version is agent-facing, so keep instructions direct and compact, but preserve the original skill's human-facing aim: make the project history useful to people who need to understand the research months later.
+This skill is agent-facing, so keep instructions direct and compact, but preserve its human-facing aim: make the project history useful to people who need to understand the research months later.
 
 ## Core Rules
 

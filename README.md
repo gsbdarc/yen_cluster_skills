@@ -1,6 +1,6 @@
 # Yen Cluster Skills
 
-Reusable agent skills for Stanford GSB's Yen computing environment, for Claude Code, the claude.ai app, Codex, and ChatGPT. These skills are for Yen end users: they need ordinary Yen access, no staff privileges, and never handle credentials. DARC-internal skills live in [`darc-staff-skills`](https://github.com/gsbdarc/darc-staff-skills), whose conventions this repo follows; they are written out in [`AGENTS.md`](AGENTS.md).
+Reusable agent skills for Stanford GSB researchers, covering the Yen computing environment and general research practice, for Claude Code, the claude.ai app, Codex, and ChatGPT. These skills are for end users: they need at most ordinary Yen access, no staff privileges, and never handle credentials. DARC-internal skills live in [`darc-staff-skills`](https://github.com/gsbdarc/darc-staff-skills), whose conventions this repo follows; they are written out in [`AGENTS.md`](AGENTS.md).
 
 ## Included skills
 
@@ -14,6 +14,7 @@ Every skill in `skills/` is live. Each folder's `manifest.yaml` says who made it
 | [`yen-project-spaces`](skills/yen-project-spaces/SKILL.md) ([example](skills/yen-project-spaces/EXAMPLE.md)) | VAST-backed project directories, quotas, workgroups, and collaborator access. Membership changes go through Stanford Workgroup Manager. | Any host for guidance; an active Yen shell for `gsbquota`. |
 | [`yen-resource-limits`](skills/yen-resource-limits/SKILL.md) ([example](skills/yen-resource-limits/EXAMPLE.md)) | Interactive, Slurm, GPU, job-array, and storage limits. | Any host for documented limits; an active Yen shell for live checks. |
 | [`yen-slurm`](skills/yen-slurm/SKILL.md) ([example](skills/yen-slurm/EXAMPLE.md)) | Planning, submitting, monitoring, troubleshooting, and scaling CPU or GPU Slurm jobs. Confirms before every `sbatch` or `scancel`. | An active Yen shell with Slurm. |
+| [`github-for-research`](skills/github-for-research/SKILL.md) ([example](skills/github-for-research/EXAMPLE.md), [rationale and sources](skills/github-for-research/README.md)) | Research-grade GitHub practice for researchers without a software background: transparent AI attribution, issues, branches, data-validation checks, reproducible environments, and a history that reads like a lab notebook. Imported, with its history, from [`claude-skill-github-for-research`](https://github.com/gsbdarc/claude-skill-github-for-research). Text CC-BY-4.0. | `git`; `gh` or a GitHub connector, signed in as you, for issues and PRs. Any host. |
 | [`new-skill`](skills/new-skill/SKILL.md) ([example](skills/new-skill/EXAMPLE.md)) | Scaffolding a new skill from the template — creates the folder, links it for both agents, adds it to a plugin if wanted, validates it, and guides the first draft. Part of the repo's own workflow, not for end users. | A clone of this repo, `git`, python3 with PyYAML, and the `claude` CLI for plugin checks. |
 
 ## Plugins
@@ -24,6 +25,7 @@ A plugin installs a group of skills together in Claude Code and the claude.ai ap
 |---|---|---|
 | `yen-basics` | `yen-access`, `yen-guide`, `yen-modules`, `yen-project-spaces` | Nothing for access and guidance. Module and quota commands need the agent to be running in an active Yen shell. |
 | `yen-compute` | `yen-slurm`, `yen-resource-limits` | An active Yen shell for live scheduler and limit checks. Every job submission or cancellation waits for your confirmation. |
+| `research-practices` | `github-for-research` | `git`, plus `gh` or a GitHub connector signed in as you for issues and pull requests. Not Yen-specific; works in any repository. |
 
 Skills that run commands can only explain them where there is no Yen shell, for example in claude.ai chat. To have them run commands, use Claude Code on a Yen (`ml claude-code`).
 
@@ -33,6 +35,7 @@ Skills that run commands can only explain them where there is no Yen shell, for 
 claude plugin marketplace add gsbdarc/yen_cluster_skills
 claude plugin install yen-basics@yen-cluster-skills
 claude plugin install yen-compute@yen-cluster-skills
+claude plugin install research-practices@yen-cluster-skills
 ```
 
 Then invoke a skill as `/yen-compute:yen-slurm`, or just describe what you need. Run `claude plugin marketplace update yen-cluster-skills` to pick up new skills.
