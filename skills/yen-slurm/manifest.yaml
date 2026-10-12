@@ -1,0 +1,10 @@
+author: Jeffotter
+created: 2026-08-11
+
+summary: >-
+  Plans, writes, submits, monitors, troubleshoots, and cancels Yen Slurm CPU and GPU jobs,
+  including job arrays. Confirms before every sbatch, scancel, or interactive allocation.
+
+requires:
+  plugins: []                 # no connectors; needs an active Yen shell with Slurm
+  secrets: []

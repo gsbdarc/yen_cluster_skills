@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Title"
+  short_description: "A few words on what it does"
+  default_prompt: "Use $skill-template to help me <do the main task>."
