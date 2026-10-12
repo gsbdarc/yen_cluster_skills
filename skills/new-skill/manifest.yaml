@@ -1,0 +1,11 @@
+author: Jeffotter
+created: 2026-10-12
+
+summary: >-
+  Scaffolds a new skill from the template inside a clone of this repo, links it for
+  both agents, adds it to the README and optionally a plugin, validates it, and guides
+  the first draft to the repo's conventions.
+
+requires:
+  plugins: []
+  secrets: []

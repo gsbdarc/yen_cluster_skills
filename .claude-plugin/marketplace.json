@@ -1,0 +1,23 @@
+{
+  "name": "yen-cluster-skills",
+  "owner": { "name": "GSB DARC" },
+  "description": "Skills for using Stanford GSB's Yen computing environment.",
+  "plugins": [
+    {
+      "name": "yen-basics",
+      "description": "Getting started on the Yens: secure access, choosing the right resource, software modules, and project storage with its workgroup access.",
+      "author": { "name": "Jeffotter" },
+      "source": "./skills",
+      "strict": false,
+      "skills": ["./yen-access", "./yen-guide", "./yen-modules", "./yen-project-spaces"]
+    },
+    {
+      "name": "yen-compute",
+      "description": "Running work on the Yens: preparing, submitting, monitoring, and cancelling Yen Slurm CPU and GPU jobs, and the compute, job-array, and storage limits that apply.",
+      "author": { "name": "Jeffotter" },
+      "source": "./skills",
+      "strict": false,
+      "skills": ["./yen-slurm", "./yen-resource-limits"]
+    }
+  ]
+}

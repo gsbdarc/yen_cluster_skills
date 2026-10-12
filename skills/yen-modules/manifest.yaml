@@ -1,0 +1,11 @@
+author: Jeffotter
+created: 2026-08-11
+
+summary: >-
+  Finds, loads, swaps, inspects, and unloads Lmod software modules in the user's active Yen
+  shell, reporting each command and its result. Changes the environment only when the user
+  asks or confirms.
+
+requires:
+  plugins: []                 # no connectors; needs an active Yen shell
+  secrets: []

@@ -1,0 +1,38 @@
+name: Skill problem
+description: A skill failed, misfired, or could not run on a surface
+title: "[compat] <skill> on <surface>: "
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      placeholder: yen-slurm
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - Claude Code
+        - claude.ai app
+        - Codex
+        - ChatGPT
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Agent version
+      description: Output of `claude --version` or `codex --version`; "web" for a UI
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you asked, what the agent did, and where it went wrong. Paste the relevant part of the transcript.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What EXAMPLE.md says should have happened

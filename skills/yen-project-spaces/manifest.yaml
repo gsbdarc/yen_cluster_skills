@@ -1,0 +1,11 @@
+author: Jeffotter
+created: 2026-08-11
+
+summary: >-
+  Explains Yen project spaces (requesting one, paths, quotas, checking usage with gsbquota)
+  and the Stanford workgroup that controls access. Points membership changes to Workgroup
+  Manager; never changes access or deletes data itself.
+
+requires:
+  plugins: []                 # no connectors; gsbquota needs an active Yen shell
+  secrets: []

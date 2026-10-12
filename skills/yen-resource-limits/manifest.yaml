@@ -1,0 +1,11 @@
+author: Jeffotter
+created: 2026-08-11
+
+summary: >-
+  Explains the documented interactive, JupyterHub, Slurm, GPU, job-array, and storage limits
+  on the Yens, and checks live values with read-only commands. Never submits jobs or changes
+  data or access.
+
+requires:
+  plugins: []                 # no connectors; live checks need an active Yen shell
+  secrets: []

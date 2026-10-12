@@ -1,0 +1,11 @@
+author: Jeffotter
+created: 2026-08-11
+
+summary: >-
+  Guides a user onto the Yens over SSH or JupyterHub (eligibility, the right host, Duo)
+  and troubleshoots basic access problems. Never handles credentials and runs nothing on
+  the cluster.
+
+requires:
+  plugins: []                 # no connectors; guidance only, the user runs SSH and Duo themselves
+  secrets: []

@@ -1,0 +1,11 @@
+author: Jeffotter
+created: 2026-08-11
+
+summary: >-
+  Explains the Yen environment and recommends interactive Yen, Yen Slurm, GPU, or a
+  storage space for the user's work, then hands off to the focused skill. Explanation only;
+  runs no commands.
+
+requires:
+  plugins: []                 # no connectors; runs no commands
+  secrets: []

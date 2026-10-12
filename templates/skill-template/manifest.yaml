@@ -1,0 +1,13 @@
+# Who made this skill, when, what it needs, and what it does — for people browsing
+# the repo and for the validator. Agents read SKILL.md, not this file, so anything
+# the agent must act on also goes in SKILL.md (compatibility + Requirements).
+
+author: github-handle          # GitHub handle of whoever made the skill
+created: 2026-01-01            # YYYY-MM-DD
+
+summary: >-
+  One or two sentences on what the skill does and what it changes.
+
+requires:
+  plugins: []                  # MCP servers / connectors, e.g. [airtable]
+  secrets: []                  # always [] here: end-user skills read no credential files
